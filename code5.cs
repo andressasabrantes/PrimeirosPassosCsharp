@@ -25,9 +25,9 @@ namespace Giraffe
             Console.WriteLine(num);
 
             //working with decrement
-            int numSubtraction = 6;
-            numSubtraction--;
-            Console.WriteLine(numSubtraction);
+            int numSubstraction = 6;
+            numSubstraction--;
+            Console.WriteLine(numSubstraction);
 
             //working with methods
             Console.WriteLine(Math.Abs(-40));//Absolute value -> 40
