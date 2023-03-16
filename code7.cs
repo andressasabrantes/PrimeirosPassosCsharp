@@ -13,12 +13,15 @@ namespace Giraffe
 
             while (true)
             {
+                //usuário escolhe a operação
                 Console.Write("Escolha a operação que deseja fazer: + ou - ou * ou / ? ");
                 string operation = Console.ReadLine();
 
 
+                //condição da operação
                 if (operation == "+")
                 {
+
                     Console.Write("Enter a number: ");
                     double sum1 = Convert.ToDouble(Console.ReadLine());
 
@@ -30,6 +33,7 @@ namespace Giraffe
                 }
                 else if (operation == "-")
                 {
+
                     Console.Write("Enter a number: ");
                     double sub1 = Convert.ToDouble(Console.ReadLine());
 
@@ -41,6 +45,7 @@ namespace Giraffe
                 }
                 else if (operation == "*")
                 {
+
                     Console.Write("Enter a number: ");
                     double multiplication1 = Convert.ToDouble(Console.ReadLine());
 
@@ -52,6 +57,7 @@ namespace Giraffe
                 }
                 else if (operation == "/")
                 {
+
                     Console.Write("Enter a number: ");
                     double division1 = Convert.ToDouble(Console.ReadLine());
 
@@ -62,10 +68,14 @@ namespace Giraffe
 
                 }
 
-                Console.WriteLine("Você gostaria de continuar calculando? S/N");
-                string sair = Console.ReadLine();
+                Console.WriteLine("Você gostaria de fazer outra operação? S/N");
+                char sair = Convert.ToChar(((Console.ReadLine())));
 
-                if (sair == "N" || sair == "n")
+                if (sair == 'S' || sair == 's')
+                {
+                    continue;
+                }
+                else if (sair == 'N' || sair == 'n')
                 {
                     break;
                 }
@@ -75,4 +85,5 @@ namespace Giraffe
         }
 
     }
+
 }
