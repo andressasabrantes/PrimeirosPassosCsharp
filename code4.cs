@@ -13,39 +13,41 @@ namespace Giraffe
         {
             //Escreva um programa que leia um número inteiro positivo N e exiba os N primeiros números da sequência de Fibonacci.
 
-            int inputUsuario;
+            long entradaDoUsuario;
 
-            //Valida a entrada se é um número inteiro
-            Console.Write("Insira um número inteiro positivo válido: ");
-            while (!int.TryParse(Console.ReadLine(), out inputUsuario))
+            //Valida se a entrada é um número inteiro positivo
+            Console.WriteLine();
+            Console.Write("Insira um número para exibir a sequência de Fibonacci: ");
+            while (!long.TryParse(Console.ReadLine(), out entradaDoUsuario) || (entradaDoUsuario < 0))
             {
-                Console.WriteLine("Entrada inválida! Tente novamente...");
+                Console.WriteLine("Oops, entrada inválida!");
+                Console.Write("Insira um número inteiro positivo válido: ");
             }
 
             //Chama o método Fibonacci
-            int[] sequence = Fibonacci(inputUsuario);
-            Console.WriteLine("A sequência ");
-            Console.WriteLine(string.Join(" ", sequence));
-
+            long[] sequencia = Fibonacci(entradaDoUsuario);
+            Console.Write("A sequência fica assim: ");
+            Console.Write(string.Join(" ", sequencia));
+            Console.WriteLine();
         }
 
-        static int[] Fibonacci(int n)
+        static long[] Fibonacci(long parametroDeParada)
         {
-            int[] sequence = new int[n];//Cria a variável sequence que vai armazenar um array com a sequência
+            long[] sequencia = new long[parametroDeParada];//Cria a variável sequence que vai armazenar um array com a sequência
 
-            for (int i = 0; i < n; i++) 
+            for (int i = 0; i < parametroDeParada; i++) 
             {
                 if (i <= 1)
                 {
-                    sequence[i] = i;//Se o valor da sequência for 0 ou 1 o valor armazenado no array será o valor da iteração
+                    sequencia[i] = i;//Se o valor da sequência for 0 ou 1 o valor armazenado no array será o valor da iteração
                 }
                 else
                 {
-                    sequence[i] = sequence[i - 1] + sequence[i - 2];//Executa a sequência de Fibonacci
+                    sequencia[i] = sequencia[i - 1] + sequencia[i - 2];//Executa a sequência de Fibonacci. Cada número seguinte é a soma dos dois números anteriores n = (n-1) + (n-2)
                 }
             }
 
-            return sequence;
+            return sequencia;
         }
 
     }
