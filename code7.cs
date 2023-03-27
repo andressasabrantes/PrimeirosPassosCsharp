@@ -24,8 +24,7 @@ namespace Giraffe
                 }
 
                 Console.Write(IsPrime(entradaUsuario));
-                Console.WriteLine();
-                     
+                Console.WriteLine();       
                 
         }
 
