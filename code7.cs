@@ -14,7 +14,6 @@ namespace Giraffe
         {
             //Faça um programa que receba um número e verifique se ele é primo ou não.
                                   
-
                 int entradaUsuario;
                 
                 Console.Write("Digite um número: ");
