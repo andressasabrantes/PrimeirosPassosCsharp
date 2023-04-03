@@ -1,7 +1,8 @@
 # PrimeirosPassosCsharp
 ## Resolução de exercícios de Lógica de Programação e Algoritmos em C#
 
-Este repositório contém uma coleção de exercícios de Lógica de Programção em C# 
+Este repositório contém uma coleção de exercícios de Lógica de Programação em C#.
+
 Os exercícios foram criados para me ajudar a entender os conceitos fundamentais da lógica de programção e a praticar a resolução de algoritmos em C#.
 
 ## Como usar este repositório
